@@ -21,17 +21,18 @@
 
 <div align="center">
 
-| Project                  | Description                                        | Link                                                                                                                     |
-| ------------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Counter                  | A simple counter app                               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Counter.jsx)      |
-| Meals API                | Fetches and displays meal data from an API         | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Meals.lazy.jsx)   |
-| Profiles                 | Displays user profile information                  | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Profiles.jsx)     |
-| Contact Form             | A form to collect and validate user input          | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Form.jsx)         |
-| StopWatch                | A functional digital stopwatch                     | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/StopWatch.jsx)    |
-| Testimonials             | A section to showcase user testimonials            | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Testimonials.jsx) |
-| Accordion                | An interactive collapsible accordion               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)    |
-| Far Away                 | Tropical adventure packing list app                | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Far-away.jsx)     |
-| Ecommerce with Filtering | A product listing app with advanced filter options | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)              |
+| Project                  | Description                                           | Link                                                                                                                     |
+| ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Counter                  | A simple counter app                                  | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Counter.jsx)      |
+| Meals API                | Fetches and displays meal data from an API            | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Meals.lazy.jsx)   |
+| Profiles                 | Displays user profile information                     | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Profiles.jsx)     |
+| Contact Form             | A form to collect and validate user input             | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Form.jsx)         |
+| StopWatch                | A functional digital stopwatch                        | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/StopWatch.jsx)    |
+| Testimonials             | A section to showcase user testimonials               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Testimonials.jsx) |
+| Accordion                | An interactive collapsible accordion                  | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)    |
+| Far Away                 | Tropical adventure packing list app                   | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Far-away.jsx)     |
+| Eat-n-Split              | A bill-splitting app to divide expenses among friends | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Eat-n-Split.jsx)  |
+| Ecommerce with Filtering | A product listing app with advanced filter options    | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)              |
 
 </div>
 
