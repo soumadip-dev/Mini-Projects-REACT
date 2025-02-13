@@ -32,6 +32,7 @@
 | Accordion                | An interactive collapsible accordion                  | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)    |
 | Far Away                 | Tropical adventure packing list app                   | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Far-away.jsx)     |
 | Eat-n-Split              | A bill-splitting app to divide expenses among friends | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Eat-n-Split.jsx)  |
+| UsePopcorn               | A movie search app with watchlist and rating features | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/usePopcorn-PROJECT-JS-REACT)                        |
 | Ecommerce with Filtering | A product listing app with advanced filter options    | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)              |
 
 </div>
