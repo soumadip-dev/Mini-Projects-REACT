@@ -16,11 +16,11 @@ const countersSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
-      const counterIndex = state.findIndex(c => c.id === action.payload.id);
+      const counterIndex = state.findIndex(c => c.id === action.payload);
       state[counterIndex].value += 1;
     },
     decrement: (state, action) => {
-      const counterIndex = state.findIndex(c => c.id === action.payload.id);
+      const counterIndex = state.findIndex(c => c.id === action.payload);
       state[counterIndex].value -= 1;
     },
   },
