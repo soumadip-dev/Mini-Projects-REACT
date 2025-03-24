@@ -131,14 +131,23 @@ const styles = {
 // App
 function RouteComponent() {
   const [showAddFriend, setShowAddFriend] = useState(false);
+  const [friends, setFriends] = useState(initialFriends);
+
+  function handleShowAddFriend() {
+    setShowAddFriend(show => !show);
+  }
+
+  function handleAddFriend(friend) {
+    setFriends(friends => [...friends, friend]);
+    setShowAddFriend(false);
+  }
+
   return (
     <div style={styles.app}>
       <div style={styles.sidebar}>
-        <FriendsList />
-        {showAddFriend && <FormAddFriend />}
-        <Button onclick={() => setShowAddFriend(show => !show)}>
-          {showAddFriend ? 'Close' : 'Add Friend'}
-        </Button>
+        <FriendsList friends={friends} />
+        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
+        <Button onclick={handleShowAddFriend}>{showAddFriend ? 'Close' : 'Add Friend'}</Button>
       </div>
       <div style={styles.formContainer}>
         <FormSplitBill />
@@ -147,8 +156,7 @@ function RouteComponent() {
   );
 }
 
-function FriendsList() {
-  const friends = initialFriends;
+function FriendsList({ friends }) {
   return (
     <ul style={styles.friendList}>
       {friends.map(friend => (
@@ -189,7 +197,7 @@ function Button({ children, style, onclick }) {
   );
 }
 
-function FormAddFriend() {
+function FormAddFriend({ onAddFriend }) {
   const [name, setName] = useState('');
   const [image, setImage] = useState('https://i.pravatar.cc/48?u=');
 
@@ -202,7 +210,7 @@ function FormAddFriend() {
       balance: 0,
       id,
     };
-
+    onAddFriend(newFriend);
     setName('');
     setImage('https://i.pravatar.cc/48?u=');
   };
