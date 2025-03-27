@@ -26,30 +26,56 @@ const initialFriends = [
   },
 ];
 
-// Style Object
+// Enhanced Style Object
 const styles = {
+  appContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '80vh',
+    backgroundColor: '#f8fafc',
+    padding: '20px',
+  },
   app: {
     display: 'flex',
-    height: '82.1vh',
-    fontFamily: 'sans-serif',
-    backgroundColor: '#f0f2f5',
+    height: '80vh',
+    width: '100%',
+    maxWidth: '1200px',
+    fontFamily: "'Inter', sans-serif",
+    backgroundColor: '#f8fafc',
+    color: '#1e293b',
+    borderRadius: '12px',
+    boxShadow: '0 0 20px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
   },
   sidebar: {
-    flex: '1',
+    flex: '0 0 350px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '20px',
-    padding: '20px',
+    gap: '16px',
+    padding: '24px',
     backgroundColor: 'white',
-    overflowY: 'auto',
+    borderRight: '1px solid #e2e8f0',
+    overflow: 'hidden',
+  },
+  sidebarContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    height: '100%',
+    overflow: 'hidden',
+  },
+  friendsListContainer: {
+    flex: '1',
+    overflow: 'auto',
   },
   formContainer: {
     flex: '1',
     display: 'flex',
     flexDirection: 'column',
-    padding: '20px',
-    backgroundColor: 'white',
-    borderLeft: '1px solid #e0e0e0', // Visual separator
+    padding: '24px',
+    backgroundColor: '#f8fafc',
+    overflow: 'hidden',
   },
   friendList: {
     listStyle: 'none',
@@ -57,88 +83,161 @@ const styles = {
     margin: 0,
     display: 'flex',
     flexDirection: 'column',
-    gap: '10px',
+    gap: '12px',
   },
   friendItem: {
     display: 'flex',
     alignItems: 'center',
-    gap: '15px',
+    gap: '16px',
     padding: '12px',
-    borderRadius: '8px',
-    backgroundColor: '#f5f5f5',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+    borderRadius: '12px',
+    backgroundColor: 'white',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+    border: '1px solid #e2e8f0',
+    transition: 'all 0.2s ease',
+    cursor: 'pointer',
+    '&:hover': {
+      transform: 'translateY(-2px)',
+      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    },
   },
   friendImage: {
     width: '48px',
     height: '48px',
     borderRadius: '50%',
     objectFit: 'cover',
+    border: '2px solid #e2e8f0',
   },
   red: {
-    color: 'red',
-    fontWeight: 'bold',
+    color: '#ef4444',
+    fontWeight: '600',
   },
   green: {
-    color: 'green',
-    fontWeight: 'bold',
+    color: '#10b981',
+    fontWeight: '600',
   },
   button: {
-    backgroundColor: '#ff6b6b',
+    backgroundColor: '#4f46e5',
     color: 'white',
     border: 'none',
-    padding: '8px 16px',
-    borderRadius: '4px',
+    padding: '10px 20px',
+    borderRadius: '8px',
     cursor: 'pointer',
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: '14px',
     marginLeft: 'auto',
+    transition: 'all 0.2s ease',
+    '&:hover': {
+      backgroundColor: '#4338ca',
+      transform: 'translateY(-1px)',
+    },
+    '&:active': {
+      transform: 'translateY(0)',
+    },
   },
   formAddFriend: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '15px',
+    gap: '16px',
     padding: '20px',
-    backgroundColor: '#f5f5f5',
-    borderRadius: '8px',
+    backgroundColor: 'white',
+    borderRadius: '12px',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+    border: '1px solid #e2e8f0',
   },
   selectedFriendItem: {
     display: 'flex',
     alignItems: 'center',
-    gap: '15px',
+    gap: '16px',
     padding: '12px',
-    borderRadius: '8px',
-    backgroundColor: '#fff8e1',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-    border: '2px solid #ffb74d',
+    borderRadius: '12px',
+    backgroundColor: '#eef2ff',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+    border: '2px solid #4f46e5',
+    transform: 'translateY(-2px)',
   },
   formSplitBill: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '15px',
+    gap: '16px',
     height: '100%',
+    backgroundColor: 'white',
+    padding: '24px',
+    borderRadius: '12px',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+    border: '1px solid #e2e8f0',
+    overflow: 'auto',
   },
   input: {
     padding: '10px',
-    borderRadius: '4px',
-    border: '1px solid #ddd',
-    fontSize: '16px',
+    borderRadius: '8px',
+    border: '1px solid #e2e8f0',
+    fontSize: '14px',
+    transition: 'all 0.2s ease',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#4f46e5',
+      boxShadow: '0 0 0 3px rgba(79, 70, 229, 0.2)',
+    },
   },
   label: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: '14px',
-    marginBottom: '5px',
+    marginBottom: '6px',
+    color: '#475569',
   },
   formTitle: {
-    margin: '0 0 20px 0',
-    color: '#333',
+    margin: '0 0 16px 0',
+    color: '#1e293b',
+    fontSize: '20px',
+    fontWeight: '700',
   },
   friendName: {
-    margin: '0 0 5px 0',
+    margin: '0 0 4px 0',
+    fontSize: '16px',
+    fontWeight: '600',
+    color: '#1e293b',
+  },
+  evenText: {
+    color: '#64748b',
+    fontSize: '14px',
+  },
+  select: {
+    padding: '10px',
+    borderRadius: '8px',
+    border: '1px solid #e2e8f0',
+    fontSize: '14px',
+    backgroundColor: 'white',
+    transition: 'all 0.2s ease',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#4f46e5',
+      boxShadow: '0 0 0 3px rgba(79, 70, 229, 0.2)',
+    },
+  },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '12px',
+  },
+  appTitle: {
+    fontSize: '24px',
+    fontWeight: '800',
+    color: '#4f46e5',
+    margin: '0',
+  },
+  emptyState: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    color: '#64748b',
     fontSize: '16px',
   },
 };
 
-// App
+// App Component
 function RouteComponent() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
@@ -166,21 +265,33 @@ function RouteComponent() {
     );
     setSelectedFriend(null);
   }
+
   return (
-    <div style={styles.app}>
-      <div style={styles.sidebar}>
-        <FriendsList
-          friends={friends}
-          onSelection={handleSelectFriend}
-          selectedFriend={selectedFriend}
-        />
-        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
-        <Button onclick={handleShowAddFriend}>{showAddFriend ? 'Close' : 'Add Friend'}</Button>
-      </div>
-      <div style={styles.formContainer}>
-        {selectedFriend && (
-          <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill} />
-        )}
+    <div style={styles.appContainer}>
+      <div style={styles.app}>
+        <div style={styles.sidebar}>
+          <div style={styles.sidebarContent}>
+            <div style={styles.header}>
+              <h1 style={styles.appTitle}>Eat-n-Split</h1>
+            </div>
+            <div style={styles.friendsListContainer}>
+              <FriendsList
+                friends={friends}
+                onSelection={handleSelectFriend}
+                selectedFriend={selectedFriend}
+              />
+            </div>
+            {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
+            <Button onclick={handleShowAddFriend}>{showAddFriend ? 'Close' : 'Add Friend'}</Button>
+          </div>
+        </div>
+        <div style={styles.formContainer}>
+          {selectedFriend ? (
+            <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill} />
+          ) : (
+            <div style={styles.emptyState}>Select a friend to split a bill</div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -204,7 +315,10 @@ function FriendsList({ friends, onSelection, selectedFriend }) {
 function Friend({ friend, onSelection, selectedFriend }) {
   const isSelected = selectedFriend?.id === friend.id;
   return (
-    <li style={isSelected ? styles.selectedFriendItem : styles.friendItem}>
+    <li
+      style={isSelected ? styles.selectedFriendItem : styles.friendItem}
+      onClick={() => onSelection(friend)}
+    >
       <img src={friend.image} alt={`${friend.name} profile picture`} style={styles.friendImage} />
       <div>
         <h3 style={styles.friendName}>{friend.name}</h3>
@@ -218,9 +332,16 @@ function Friend({ friend, onSelection, selectedFriend }) {
             You owe {friend.name} ₹{Math.abs(friend.balance)}
           </p>
         )}
-        {friend.balance === 0 && <p>You and {friend.name} are even</p>}
+        {friend.balance === 0 && <p style={styles.evenText}>You and {friend.name} are even</p>}
       </div>
-      <Button onclick={() => onSelection(friend)}>{isSelected ? 'Close' : 'Select'}</Button>
+      <Button
+        onclick={e => {
+          e.stopPropagation();
+          onSelection(friend);
+        }}
+      >
+        {isSelected ? 'Close' : 'Select'}
+      </Button>
     </li>
   );
 }
@@ -250,6 +371,7 @@ function FormAddFriend({ onAddFriend }) {
     setName('');
     setImage('https://i.pravatar.cc/48?u=');
   };
+
   return (
     <form style={styles.formAddFriend} onSubmit={handleSubmit}>
       <h3 style={styles.formTitle}>Add Friend</h3>
@@ -260,6 +382,7 @@ function FormAddFriend({ onAddFriend }) {
         value={name}
         onChange={e => setName(e.target.value)}
         required
+        placeholder="Enter friend's name"
       />
 
       <label style={styles.label}>📸 Image URL</label>
@@ -269,6 +392,7 @@ function FormAddFriend({ onAddFriend }) {
         value={image}
         onChange={e => setImage(e.target.value)}
         required
+        placeholder="https://i.pravatar.cc/48?u="
       />
       <Button>Add</Button>
     </form>
@@ -283,37 +407,40 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!bill | !paidByUser) return;
+    if (!bill || !paidByUser) return;
     onSplitBill(whoIsPaying === 'user' ? paidByFriend : -paidByUser);
   }
 
   return (
     <form style={styles.formSplitBill} onSubmit={handleSubmit}>
       <h2 style={styles.formTitle}>Split a bill with {selectedFriend.name}</h2>
+
       <label style={styles.label}>💰 Bill Value</label>
       <input
-        type="text"
+        type="number"
         style={styles.input}
         value={bill}
         onChange={e => setBill(Number(e.target.value))}
+        placeholder="Enter total bill amount"
       />
 
-      <label style={styles.label}> 🕴️Your expense</label>
+      <label style={styles.label}> 🕴️ Your expense</label>
       <input
-        type="text"
+        type="number"
         style={styles.input}
         value={paidByUser}
         onChange={e =>
           setPaidByUser(Number(e.target.value) > bill ? paidByUser : Number(e.target.value))
         }
+        placeholder="Enter your share"
       />
 
-      <label style={styles.label}>👫{selectedFriend.name}'s expense</label>
-      <input type="text" style={styles.input} disabled value={paidByFriend} />
+      <label style={styles.label}>👫 {selectedFriend.name}'s expense</label>
+      <input type="number" style={styles.input} disabled value={paidByFriend} />
 
       <label style={styles.label}>🤑 Who is paying the bill?</label>
       <select
-        style={styles.input}
+        style={{ ...styles.input, ...styles.select }}
         value={whoIsPaying}
         onChange={e => setWhoIsPaying(e.target.value)}
       >
