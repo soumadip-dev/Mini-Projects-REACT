@@ -20,6 +20,7 @@ import { Route as StopWatchImport } from './routes/StopWatch'
 import { Route as ProfilesImport } from './routes/Profiles'
 import { Route as FormImport } from './routes/Form'
 import { Route as FarAwayImport } from './routes/Far-away'
+import { Route as EatNSplitImport } from './routes/Eat-n-Split'
 import { Route as DebounceDemoImport } from './routes/DebounceDemo'
 import { Route as CounterImport } from './routes/Counter'
 import { Route as CalculatorImport } from './routes/Calculator'
@@ -79,6 +80,12 @@ const FormRoute = FormImport.update({
 const FarAwayRoute = FarAwayImport.update({
   id: '/Far-away',
   path: '/Far-away',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const EatNSplitRoute = EatNSplitImport.update({
+  id: '/Eat-n-Split',
+  path: '/Eat-n-Split',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -170,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebounceDemoImport
       parentRoute: typeof rootRoute
     }
+    '/Eat-n-Split': {
+      id: '/Eat-n-Split'
+      path: '/Eat-n-Split'
+      fullPath: '/Eat-n-Split'
+      preLoaderRoute: typeof EatNSplitImport
+      parentRoute: typeof rootRoute
+    }
     '/Far-away': {
       id: '/Far-away'
       path: '/Far-away'
@@ -245,6 +259,7 @@ export interface FileRoutesByFullPath {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Eat-n-Split': typeof EatNSplitRoute
   '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
@@ -263,6 +278,7 @@ export interface FileRoutesByTo {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Eat-n-Split': typeof EatNSplitRoute
   '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
@@ -282,6 +298,7 @@ export interface FileRoutesById {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Eat-n-Split': typeof EatNSplitRoute
   '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
@@ -302,6 +319,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Eat-n-Split'
     | '/Far-away'
     | '/Form'
     | '/Profiles'
@@ -319,6 +337,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Eat-n-Split'
     | '/Far-away'
     | '/Form'
     | '/Profiles'
@@ -336,6 +355,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Eat-n-Split'
     | '/Far-away'
     | '/Form'
     | '/Profiles'
@@ -355,6 +375,7 @@ export interface RootRouteChildren {
   CalculatorRoute: typeof CalculatorRoute
   CounterRoute: typeof CounterRoute
   DebounceDemoRoute: typeof DebounceDemoRoute
+  EatNSplitRoute: typeof EatNSplitRoute
   FarAwayRoute: typeof FarAwayRoute
   FormRoute: typeof FormRoute
   ProfilesRoute: typeof ProfilesRoute
@@ -373,6 +394,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalculatorRoute: CalculatorRoute,
   CounterRoute: CounterRoute,
   DebounceDemoRoute: DebounceDemoRoute,
+  EatNSplitRoute: EatNSplitRoute,
   FarAwayRoute: FarAwayRoute,
   FormRoute: FormRoute,
   ProfilesRoute: ProfilesRoute,
@@ -400,6 +422,7 @@ export const routeTree = rootRoute
         "/Calculator",
         "/Counter",
         "/DebounceDemo",
+        "/Eat-n-Split",
         "/Far-away",
         "/Form",
         "/Profiles",
@@ -428,6 +451,9 @@ export const routeTree = rootRoute
     },
     "/DebounceDemo": {
       "filePath": "DebounceDemo.jsx"
+    },
+    "/Eat-n-Split": {
+      "filePath": "Eat-n-Split.jsx"
     },
     "/Far-away": {
       "filePath": "Far-away.jsx"

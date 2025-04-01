@@ -55,6 +55,7 @@ function RootComponent() {
           { to: '/Testimonials', label: 'Testimonial' },
           { to: '/accordion', label: 'Accordion' },
           { to: '/Far-Away', label: 'Far Away' },
+          { to: '/eat-n-split', label: 'Eat Split' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}
