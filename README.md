@@ -15,6 +15,21 @@
 </h3>
 
 ---
+
+## 📦 Projects
+
+<div align="center">
+
+| Project Name          | Description               |
+|-----------------------|---------------------------|
+| **Counter**           | A simple counter app      |
+| **Todo**              | A task management app     |
+| **Meals API Project** | A project fetching meal data |
+
+</div>
+
+
+
 <!-- 
 ## 📦 Projects
 
