@@ -9,52 +9,80 @@ const App = () => {
     fetch(url, options)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data); // check the response
-        setData(data.data.data); // adjust based on actual structure
+        console.log(data);
+        setData(data.data.data);
       })
       .catch(() => setData([]));
   }, []);
 
+  if (!data) {
+    return (
+      <div style={{ textAlign: 'center', marginTop: '2rem' }}>Loading...</div>
+    );
+  }
+
   return (
-    <div>
-      <h1>Hello world</h1>
-      <p>User List:</p>
+    <div
+      style={{
+        maxWidth: '960px',
+        margin: '2rem auto',
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      }}
+    >
+      <h1 style={{ textAlign: 'center', color: '#2c3e50' }}>Hello World</h1>
+      <p style={{ textAlign: 'center', fontWeight: '600', color: '#34495e' }}>
+        User List:
+      </p>
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-          gap: '1rem',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: '1.5rem',
           padding: '1rem',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          backgroundColor: '#f5f5f5',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          backgroundColor: '#fafafa',
+          boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
         }}
       >
-        {data?.map((user) => (
+        {data.map((user) => (
           <div
             key={user.email}
             style={{
-              flex: '0 1 250px',
-              border: '1px solid #ccc',
-              borderRadius: '10px',
-              padding: '5px',
+              border: '1px solid #ddd',
+              borderRadius: '12px',
+              padding: '1rem',
               textAlign: 'center',
-              boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+              boxShadow: '0 3px 6px rgba(0,0,0,0.1)',
+              backgroundColor: '#fff',
             }}
           >
             <img
-              src={user?.picture?.large}
+              src={user.picture.large}
               alt="User profile"
-              style={{ width: '100px', borderRadius: '50%' }}
+              style={{
+                width: '110px',
+                height: '110px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                marginBottom: '0.75rem',
+              }}
             />
-            <p>
-              <strong>
-                {`${user.name.title} ${user.name.first} ${user.name.last}`}
-              </strong>
+            <p
+              style={{
+                fontWeight: '700',
+                fontSize: '1.1rem',
+                marginBottom: '0.25rem',
+                color: '#2c3e50',
+              }}
+            >
+              {`${user.name.title} ${user.name.first} ${user.name.last}`}
             </p>
             <p
               style={{
-                padding: '5px',
+                fontSize: '0.9rem',
+                color: '#7f8c8d',
+                wordBreak: 'break-word',
               }}
             >
               {user.email}
