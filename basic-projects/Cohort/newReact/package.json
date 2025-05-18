@@ -1,0 +1,28 @@
+{
+  "name": "newreact",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,html}\"",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "description": "A new React project using Vite",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^6.3.5",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3"
+  }
+}
