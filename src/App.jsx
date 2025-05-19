@@ -1,15 +1,13 @@
-import Counter from './components/Counter';
-import Todo from './components/Todo';
-import Meals from './components/Meals';
+import Counter from './Pages/Counter';
+import Todo from './Pages/Todo';
+import Meals from './Pages/Meals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './components/Landing';
-import Profiles from './components/Profiles';
-import ContactForm from './components/ContactForm';
+import Landing from './Pages/Landing';
+import Profiles from './Pages/Profiles';
+import ContactForm from './Pages/ContactForm';
 import Layout from './components/Layout';
-import NotFound from './components/NotFound';
-import StopWatch from './components/StopWatch';
-
-import LightBulb from './components/LightBulb';
+import NotFound from './Pages/NotFound';
+import StopWatch from './Pages/StopWatch';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -25,7 +23,7 @@ const App = () => {
             <Route path="profile" element={<Profiles />} />
             <Route path="form" element={<ContactForm />} />
             <Route path="watch" element={<StopWatch />} />
-            <Route path="*" element={<LightBulb />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
