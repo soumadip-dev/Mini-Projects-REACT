@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import useFetch from './hooks/useFetch';
 
 const App = () => {
-  const [data, setData] = useState(null);
   const url = 'https://api.freeapi.app/api/v1/public/randomusers/';
   const options = { method: 'GET', headers: { accept: 'application/json' } };
 
-  useEffect(() => {
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setData(data.data.data);
-      })
-      .catch(() => setData([]));
-  }, []);
+  const { data, error } = useFetch(url, options);
 
   if (!data) {
     return (
@@ -45,9 +37,9 @@ const App = () => {
           boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
         }}
       >
-        {data.map((user) => (
+        {data?.data?.data.map((user) => (
           <div
-            key={user.email}
+            key={user.id}
             style={{
               border: '1px solid #ddd',
               borderRadius: '12px',
