@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from './hooks/useFetch';
+import ContactForm from './ContactForm';
 
 const App = () => {
   const url = 'https://api.freeapi.app/api/v1/public/randomusers/';
@@ -81,6 +82,10 @@ const App = () => {
             </p>
           </div>
         ))}
+      </div>
+
+      <div>
+        <ContactForm />
       </div>
     </div>
   );
