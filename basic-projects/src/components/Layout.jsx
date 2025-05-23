@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
-const Navber = () => {
+const Layout = () => {
   const navContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -72,4 +72,4 @@ const Navber = () => {
   );
 };
 
-export default Navber;
+export default Layout;
