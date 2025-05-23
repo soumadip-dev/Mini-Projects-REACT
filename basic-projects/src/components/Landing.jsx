@@ -1,55 +1,75 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 const Landing = () => {
   const containerStyle = {
-    padding: '40px',
-    fontFamily: 'Arial, sans-serif',
+    flexGrow: 1, // fill available vertical space
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f0f4f8',
     textAlign: 'center',
-    background: '#f0f4f8',
-    minHeight: '100vh',
+    padding: '60px 20px 40px', // add top padding to clear navbar height (~60px)
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    minHeight: 'calc(100vh - 60px)', // viewport height minus navbar height
+    boxSizing: 'border-box',
   };
 
   const headingStyle = {
-    fontSize: '32px',
+    fontSize: '3rem',
+    fontWeight: '700',
     marginBottom: '20px',
-    color: '#333',
+    color: '#222',
+    textShadow: '1px 1px 3px rgba(0,0,0,0.1)',
   };
 
-  const linkStyle = {
-    display: 'inline-block',
-    margin: '10px',
-    padding: '12px 24px',
-    textDecoration: 'none',
-    backgroundColor: '#007BFF',
+  const paragraphStyle = {
+    fontSize: '1.25rem',
+    maxWidth: '600px',
+    marginBottom: '32px',
+    color: '#444',
+    lineHeight: '1.6',
+  };
+
+  const buttonStyle = {
+    backgroundColor: '#007bff',
     color: '#fff',
-    borderRadius: '6px',
-    transition: 'background-color 0.3s ease',
+    padding: '14px 32px',
+    border: 'none',
+    borderRadius: '10px',
+    fontSize: '1.1rem',
+    fontWeight: '600',
+    cursor: 'pointer',
+    boxShadow: '0 4px 8px rgba(0, 123, 255, 0.4)',
+    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+    textDecoration: 'none',
+    display: 'inline-block',
   };
 
-  const linkHoverStyle = {
+  const buttonHoverStyle = {
     backgroundColor: '#0056b3',
+    boxShadow: '0 6px 12px rgba(0, 86, 179, 0.6)',
   };
+
+  const [hover, setHover] = React.useState(false);
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>Welcome to the React Playground</h1>
-      <div>
-        <Link to="/counter" style={linkStyle}>
-          Counter
-        </Link>
-        <Link to="/todo" style={linkStyle}>
-          Todo
-        </Link>
-        <Link to="/meals" style={linkStyle}>
-          Meals
-        </Link>
-        <Link to="/profile" style={linkStyle}>
-          Profiles
-        </Link>
-        <Link to="/form" style={linkStyle}>
-          Contact Form
-        </Link>
-      </div>
+      <h1 style={headingStyle}>Welcome to My React Mini Projects</h1>
+      <p style={paragraphStyle}>
+        This is a simple collection of projects created using React while learning and building
+        hands-on experience.
+      </p>
+      <a
+        href="https://github.com/soumadip-dev/Mini-Projects-React"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={hover ? { ...buttonStyle, ...buttonHoverStyle } : buttonStyle}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        Visit GitHub Repo
+      </a>
     </div>
   );
 };

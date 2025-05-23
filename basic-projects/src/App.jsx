@@ -7,26 +7,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './components/Landing';
 import Profiles from './components/Profiles';
 import ContactForm from './components/ContactForm';
+import Navber from './components/Navber';
 
 const App = () => {
   const name = 'Soumadip Majila';
   return (
     <div>
-      {/* <CmpA name={name} /> */}
-      {/* <UnderStandChildren>
-        <div style={{ color: 'green' }}>
-          What do you want to post <br />
-          <input type="text" />
-        </div>
-      </UnderStandChildren>
-
-      <UnderStandChildren>
-        <div style={{ color: 'red' }}>
-          What is your favorite color? <br />
-          <input type="color" />
-        </div>
-      </UnderStandChildren> */}
       <BrowserRouter>
+        <Navber />
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/counter" element={<Counter />} />

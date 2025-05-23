@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useContactForm } from '../hooks/useContactForm';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -8,12 +9,27 @@ const ContactForm = () => {
     message: '',
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const navigate = useNavigate();
+
   const { loading, successMessage, errorMessage, submitContact } = useContactForm();
 
   const handleSubmit = e => {
     e.preventDefault();
     submitContact(form);
+    setIsSubmitted(true);
   };
+
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        navigate('/'); // home page route, adjust if needed
+      }, 10000);
+
+      // Cleanup timer if component unmounts before timeout
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted, navigate]);
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
