@@ -7,6 +7,7 @@ import Profiles from './components/Profiles';
 import ContactForm from './components/ContactForm';
 import Layout from './components/Layout';
 import NotFound from './components/NotFound';
+import StopWatch from './components/StopWatch';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="meals" element={<Meals />} />
             <Route path="profile" element={<Profiles />} />
             <Route path="form" element={<ContactForm />} />
+            <Route path="watch" element={<StopWatch />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

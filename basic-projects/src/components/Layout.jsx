@@ -43,6 +43,7 @@ const Layout = () => {
           { to: '/meals', label: 'Meals' },
           { to: '/profile', label: 'Profiles' },
           { to: '/form', label: 'Contact Form' },
+          { to: '/watch', label: 'Stop Watch' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}
