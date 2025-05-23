@@ -8,6 +8,7 @@ import Landing from './components/Landing';
 import Profiles from './components/Profiles';
 import ContactForm from './components/ContactForm';
 import Navber from './components/Navber';
+import NotFound from './components/NotFound';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/meals" element={<Meals />} />
           <Route path="/profile" element={<Profiles />} />
           <Route path="/form" element={<ContactForm />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
