@@ -20,7 +20,7 @@ const Meals = () => {
     padding: '40px',
     backgroundColor: '#f8f9fa',
     fontFamily: 'Arial, sans-serif',
-    minHeight: '100vh',
+    minHeight: '70vh',
   };
 
   const cardStyle = {

@@ -12,7 +12,7 @@ function Counter() {
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
     background: '#f7f9fc',
-    minHeight: '100vh',
+    minHeight: '70vh',
   };
 
   const countStyle = {

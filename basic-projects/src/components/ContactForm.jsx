@@ -89,7 +89,7 @@ export default ContactForm;
 // STYLES
 const styles = {
   wrapper: {
-    minHeight: '100vh',
+    minHeight: '70vh',
     backgroundColor: '#f0f4f8',
     display: 'flex',
     justifyContent: 'center',

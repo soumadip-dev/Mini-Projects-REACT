@@ -39,7 +39,7 @@ const Todo = () => {
     padding: '40px',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#f9f9f9',
-    minHeight: '100vh',
+    minHeight: '70vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

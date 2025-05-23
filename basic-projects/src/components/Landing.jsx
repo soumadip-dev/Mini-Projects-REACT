@@ -11,7 +11,7 @@ const Landing = () => {
     textAlign: 'center',
     padding: '60px 20px 40px', // add top padding to clear navbar height (~60px)
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    minHeight: 'calc(100vh - 60px)', // viewport height minus navbar height
+    minHeight: '83vh',
     boxSizing: 'border-box',
   };
 
