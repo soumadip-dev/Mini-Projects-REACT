@@ -14,22 +14,12 @@ const LightBulb = () => {
 export default LightBulb;
 
 function BulbState() {
-  return (
-    <BulbContext.Consumer>
-      {({ bulbOn }) => <div>{bulbOn ? 'Bulb on' : 'Bulb off'}</div>}
-    </BulbContext.Consumer>
-  );
+  const { bulbOn } = useContext(BulbContext);
+  return <div>{bulbOn ? 'Bulb on' : 'Bulb off'}</div>;
 }
 
 function ToggleBulbState() {
-  return (
-    <BulbContext.Consumer>
-      {({ bulbOn, setBulbOn }) => {
-        {
-          const toggle = () => setBulbOn(!bulbOn);
-          return <button onClick={toggle}>Toggle the bulb</button>;
-        }
-      }}
-    </BulbContext.Consumer>
-  );
+  const { bulbOn, setBulbOn } = useContext(BulbContext);
+  const toggle = () => setBulbOn(!bulbOn);
+  return <button onClick={toggle}>Toggle the bulb</button>;
 }
