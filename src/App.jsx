@@ -9,6 +9,8 @@ import Layout from './components/Layout';
 import NotFound from './components/NotFound';
 import StopWatch from './components/StopWatch';
 
+import LightBulb from './components/LightBulb';
+
 const App = () => {
   const name = 'Soumadip Majila';
   return (
@@ -23,7 +25,7 @@ const App = () => {
             <Route path="profile" element={<Profiles />} />
             <Route path="form" element={<ContactForm />} />
             <Route path="watch" element={<StopWatch />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<LightBulb />} />
           </Route>
         </Routes>
       </BrowserRouter>
