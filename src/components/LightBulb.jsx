@@ -1,14 +1,16 @@
 import React, { createContext, useState, useContext } from 'react';
 
 const BulbContext = createContext();
-
-const LightBulb = () => {
+const BulbProvider = ({ children }) => {
   const [bulbOn, setBulbOn] = useState(true);
+  return <BulbContext.Provider value={{ bulbOn, setBulbOn }}>{children}</BulbContext.Provider>;
+};
+const LightBulb = () => {
   return (
-    <BulbContext.Provider value={{ bulbOn, setBulbOn }}>
+    <BulbProvider>
       <BulbState />
       <ToggleBulbState />
-    </BulbContext.Provider>
+    </BulbProvider>
   );
 };
 export default LightBulb;
