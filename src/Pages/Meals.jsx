@@ -1,9 +1,9 @@
-import useFetch from '../hooks/useFetch';
+import useRefetchableFetch from '../hooks/useRefetchableFetch';
 import { ShimmerPostItem } from 'react-shimmer-effects';
 
 const Meals = () => {
   const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
-  const { data, error, loading } = useFetch(url);
+  const { data, error, loading } = useRefetchableFetch(url, 10);
 
   if (loading) {
     // Render multiple shimmer cards to mimic the final UI
