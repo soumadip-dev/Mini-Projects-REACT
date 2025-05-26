@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useContactForm } from '../hooks/useContactForm';
+import { useContactForm } from '../hooks/useContactForm.jsx';
 import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
