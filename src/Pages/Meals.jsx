@@ -1,12 +1,21 @@
-import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
+import { ShimmerPostItem } from 'react-shimmer-effects';
 
 const Meals = () => {
   const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
   const { data, error, loading } = useFetch(url);
 
   if (loading) {
-    return <p style={{ textAlign: 'center' }}>Loading meals...</p>;
+    // Render multiple shimmer cards to mimic the final UI
+    return (
+      <div style={containerStyle}>
+        {[...Array(6)].map((_, idx) => (
+          <div key={idx} style={cardStyle}>
+            <ShimmerPostItem card title cta />
+          </div>
+        ))}
+      </div>
+    );
   }
 
   if (error) {

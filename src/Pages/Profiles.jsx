@@ -1,11 +1,23 @@
 import useFetch from '../hooks/useFetch';
+import { ShimmerPostItem } from 'react-shimmer-effects';
 
 const Profiles = () => {
   const url = 'https://api.freeapi.app/api/v1/public/randomusers/';
 
   const { data, error, loading } = useFetch(url);
 
-  if (loading) return <p style={{ textAlign: 'center' }}>Loading profiles...</p>;
+  if (loading) {
+    // Render multiple shimmer cards to mimic the final UI
+    return (
+      <div style={containerStyle}>
+        {[...Array(6)].map((_, idx) => (
+          <div key={idx} style={cardStyle}>
+            <ShimmerPostItem card title />
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   if (error) return <p style={{ textAlign: 'center', color: 'red' }}>Error: {error}</p>;
 

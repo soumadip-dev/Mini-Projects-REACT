@@ -4,7 +4,7 @@ const useFetch = url => {
   const initialState = {
     loading: true,
     error: null,
-    data: [],
+    data: {},
   };
   // Reducer function for updating state
   const reducer = (state, { type, payload }) => {
@@ -12,7 +12,7 @@ const useFetch = url => {
       case 'FETCH_SUCCESS':
         return { loading: false, data: payload, error: null };
       case 'FETCH_ERROR':
-        return { loading: false, error: payload, data: [] };
+        return { loading: false, error: payload, data: {} };
       default:
         return state;
     }
