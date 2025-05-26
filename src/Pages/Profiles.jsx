@@ -2,22 +2,12 @@ import useFetch from '../hooks/useFetch';
 
 const Profiles = () => {
   const url = 'https://api.freeapi.app/api/v1/public/randomusers/';
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-    },
-  };
 
-  const { data, error } = useFetch(url, options);
+  const { data, error, loading } = useFetch(url);
 
-  if (!data) {
-    return (
-      <div style={{ textAlign: 'center', marginTop: '2rem', fontFamily: 'Arial, sans-serif' }}>
-        Loading...
-      </div>
-    );
-  }
+  if (loading) return <p style={{ textAlign: 'center' }}>Loading profiles...</p>;
+
+  if (error) return <p style={{ textAlign: 'center', color: 'red' }}>Error: {error}</p>;
 
   return (
     <div style={containerStyle}>

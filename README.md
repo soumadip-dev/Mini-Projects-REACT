@@ -52,4 +52,6 @@ Rolling up the state, unoptimal re-renders
 Prop Drilling
 Context API
 Zustand
-[useReducer](https://youtu.be/BNB-Q5yI-_o?si=f1_NthQLgTmKFXXO) -->
+[useReducer](https://youtu.be/BNB-Q5yI-_o?si=f1_NthQLgTmKFXXO)
+Custom Hooks
+-->
