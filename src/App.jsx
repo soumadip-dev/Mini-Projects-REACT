@@ -8,6 +8,7 @@ import ContactForm from './Pages/ContactForm';
 import Layout from './components/Layout';
 import NotFound from './Pages/NotFound';
 import StopWatch from './Pages/StopWatch';
+import DebounceDemo from './Pages/DebounceDemo';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="form" element={<ContactForm />} />
             <Route path="watch" element={<StopWatch />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="debounce" element={<DebounceDemo />} />
           </Route>
         </Routes>
       </BrowserRouter>
