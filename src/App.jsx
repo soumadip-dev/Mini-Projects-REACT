@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound';
 import StopWatch from './Pages/StopWatch';
 import DebounceDemo from './Pages/DebounceDemo';
 import Calculator from './Pages/Calculator';
+import ToggleBackgroundColor from './Pages/ToggleBackgroundColor';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="watch" element={<StopWatch />} />
             <Route path="calculator" element={<Calculator />} />
             <Route path="debounce" element={<DebounceDemo />} />
+            <Route path="theme" element={<ToggleBackgroundColor />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

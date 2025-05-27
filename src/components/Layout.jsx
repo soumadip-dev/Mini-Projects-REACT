@@ -5,10 +5,10 @@ const Layout = () => {
   const navContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
-    gap: '1.5rem', // ~24px
-    padding: '1rem 0', // ~16px top-bottom
+    gap: '1.2rem',
+    padding: '1rem 0',
     backgroundColor: '#007bff',
-    boxShadow: '0 0.125rem 0.375rem rgba(0,0,0,0.15)', // ~2px 6px
+    boxShadow: '0 0.125rem 0.375rem rgba(0,0,0,0.15)',
   };
 
   const linkStyle = {
@@ -46,6 +46,7 @@ const Layout = () => {
           { to: '/watch', label: 'Stop Watch' },
           { to: '/debounce', label: 'Debounce' },
           { to: '/calculator', label: 'Calculator' },
+          { to: '/theme', label: 'Toggle Theme' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}
