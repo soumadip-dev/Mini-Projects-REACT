@@ -48,6 +48,7 @@ const Layout = () => {
           { to: '/calculator', label: 'Calculator' },
           { to: '/theme', label: 'Toggle Theme' },
           { to: '/testimonial', label: 'Testimonial' },
+          { to: '/accordion', label: 'Accordion' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}

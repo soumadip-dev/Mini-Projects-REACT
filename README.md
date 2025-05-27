@@ -18,14 +18,14 @@
 
 ## 📦 Projects
 
-| Project Name     | Description                                |
-| ---------------- | ------------------------------------------ |
-| **Counter**      | A simple counter app                       |
-| **Todo**         | A task management app                      |
-| **Meals API**    | Fetches and displays meal data from an API |
-| **Profiles**     | Displays user profile information          |
-| **Contact Form** | A form to collect and validate user input  |
-| **StopWatch**    | A functional digital stopwatch             |
+| Project Name     | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| **Counter**      | A simple counter app                               |
+| **Todo**         | A task management app                              |
+| **Meals API**    | Fetches and displays meal data from an API         |
+| **Profiles**     | Displays user profile information                  |
+| **Contact Form** | A form to collect and validate user input          |
+| **StopWatch**    | A functional digital stopwatch                     |
 | **Calculator**   | A functional calculator with arithmetic operations |
 
 <!--
@@ -55,4 +55,6 @@ Context API
 Zustand
 [useReducer](https://youtu.be/BNB-Q5yI-_o?si=f1_NthQLgTmKFXXO)
 Custom Hooks
+
+
 -->
