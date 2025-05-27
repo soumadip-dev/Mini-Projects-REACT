@@ -5,25 +5,25 @@ const Layout = () => {
   const navContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
-    gap: '24px',
-    padding: '16px 0',
+    gap: '1.5rem', // ~24px
+    padding: '1rem 0', // ~16px top-bottom
     backgroundColor: '#007bff',
-    boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+    boxShadow: '0 0.125rem 0.375rem rgba(0,0,0,0.15)', // ~2px 6px
   };
 
   const linkStyle = {
     color: '#fff',
     textDecoration: 'none',
     fontSize: '1.1rem',
-    fontWeight: '600',
-    padding: '8px 12px',
-    borderRadius: '6px',
+    fontWeight: 600,
+    padding: '0.5rem 0.75rem', // ~8px 12px
+    borderRadius: '0.375rem', // ~6px
     transition: 'background-color 0.3s ease',
   };
 
   const footerStyle = {
     backgroundColor: '#f8f9fa',
-    padding: '16px 0',
+    padding: '1rem 0', // ~16px
     textAlign: 'center',
     fontSize: '0.95rem',
     color: '#555',
@@ -45,6 +45,7 @@ const Layout = () => {
           { to: '/form', label: 'Contact Form' },
           { to: '/watch', label: 'Stop Watch' },
           { to: '/debounce', label: 'Debounce' },
+          { to: '/calculator', label: 'Calculator' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}
@@ -62,7 +63,9 @@ const Layout = () => {
       </nav>
 
       {/* Main content rendered here */}
-      <div style={{ flex: 1, padding: '20px' }}>
+      <div style={{ flex: 1, padding: '1.25rem' }}>
+        {' '}
+        {/* ~20px */}
         <Outlet />
       </div>
 

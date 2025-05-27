@@ -9,6 +9,7 @@ import Layout from './components/Layout';
 import NotFound from './Pages/NotFound';
 import StopWatch from './Pages/StopWatch';
 import DebounceDemo from './Pages/DebounceDemo';
+import Calculator from './Pages/Calculator';
 
 const App = () => {
   const name = 'Soumadip Majila';
@@ -24,8 +25,9 @@ const App = () => {
             <Route path="profile" element={<Profiles />} />
             <Route path="form" element={<ContactForm />} />
             <Route path="watch" element={<StopWatch />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="calculator" element={<Calculator />} />
             <Route path="debounce" element={<DebounceDemo />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
