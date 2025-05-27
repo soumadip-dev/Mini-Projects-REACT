@@ -47,6 +47,7 @@ const Layout = () => {
           { to: '/debounce', label: 'Debounce' },
           { to: '/calculator', label: 'Calculator' },
           { to: '/theme', label: 'Toggle Theme' },
+          { to: '/testimonial', label: 'Testimonial' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}

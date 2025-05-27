@@ -2,7 +2,7 @@ import useRefetchableFetch from '../hooks/useRefetchableFetch';
 import { ShimmerPostItem } from 'react-shimmer-effects';
 
 const Meals = () => {
-  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
+  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian';
   const { data, error, loading } = useRefetchableFetch(url, 10);
 
   if (loading) {
