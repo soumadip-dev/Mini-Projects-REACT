@@ -26,6 +26,7 @@
 | **Profiles**     | Displays user profile information          |
 | **Contact Form** | A form to collect and validate user input  |
 | **StopWatch**    | A functional digital stopwatch             |
+| **Calculator**   | A functional calculator with arithmetic operations |
 
 <!--
 Starting a React project locally
