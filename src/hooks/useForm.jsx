@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-export function useContactForm() {
+export function useForm() {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const submitContact = async (formData) => {
+  const submitContact = async formData => {
     setLoading(true);
     setSuccessMessage(null);
     setErrorMessage(null);
 
     try {
-      const res = await fetch('https://getform.io/f/amdmpvob', {
+      const res = await fetch('https://getform.io/f/bmdmkgpa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

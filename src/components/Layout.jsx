@@ -42,7 +42,7 @@ const Layout = () => {
           { to: '/todo', label: 'Todo' },
           { to: '/meals', label: 'Meals' },
           { to: '/profile', label: 'Profiles' },
-          { to: '/form', label: 'Contact Form' },
+          { to: '/form', label: 'Form' },
           { to: '/watch', label: 'Stop Watch' },
           { to: '/debounce', label: 'Debounce' },
           { to: '/calculator', label: 'Calculator' },
