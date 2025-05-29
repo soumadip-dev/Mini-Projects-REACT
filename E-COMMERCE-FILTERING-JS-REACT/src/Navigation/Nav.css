@@ -1,26 +1,55 @@
 nav {
   display: flex;
   border-bottom: 2px solid #f3f3f3;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem 2rem;
   z-index: 999;
-  margin-left: 2rem;
+  background: white;
+  position: sticky;
+  top: 0;
 }
 
-input {
-  padding: 12px 20px;
-  border: none;
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 800px;
+}
+
+.search-input {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e0e0e0;
   background: #f7f6f6;
   outline: none;
-  margin-right: 20px;
-  border-radius: 5px;
-  position: relative;
-  width: 14rem;
+  margin-right: 1.5rem;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.search-input:focus {
+  border-color: #d5ab55;
+  box-shadow: 0 0 0 2px rgba(213, 171, 85, 0.2);
+  background: white;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-icons {
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 2rem;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.nav-icons:hover {
+  color: #d5ab55;
+  transform: scale(1.1);
 }

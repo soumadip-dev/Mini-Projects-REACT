@@ -4,11 +4,16 @@ import Price from './Price/Price';
 import './Sidebar.css';
 const Sidebar = () => {
   return (
-    <div>
-      <Category />
-      <Colors />
-      <Price />
-    </div>
+    <>
+      <section className="sidebar">
+        <div className="logo-container">
+          <h1>🛒</h1>
+        </div>
+        <Category />
+        <Colors />
+        <Price />
+      </section>
+    </>
   );
 };
 export default Sidebar;
