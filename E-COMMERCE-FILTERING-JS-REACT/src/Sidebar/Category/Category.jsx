@@ -9,22 +9,10 @@ const Category = () => {
           <input type="radio" value="" name="test" />
           <span className="checkmark"></span>All
         </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test" />
-          <span className="checkmark"></span>Sneakers
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test" />
-          <span className="checkmark"></span>Flats
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test" />
-          <span className="checkmark"></span>Sandals
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test" />
-          <span className="checkmark"></span>Heels
-        </label>
+        <Input value="sneakers" title="Sneakers" name="test" />
+        <Input value="flats" title="Flats" name="test" />
+        <Input value="sandals" title="Sandals" name="test" />
+        <Input value="heels" title="Heels" name="test" />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import Input from '../../components/Input';
 import './Colors.css';
 const Colors = () => {
   return (
@@ -8,22 +9,14 @@ const Colors = () => {
           <input type="radio" value="" name="test2" />
           <span className="checkmark"></span>All
         </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test2" />
-          <span className="checkmark"></span>Black
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test2" />
-          <span className="checkmark"></span>Blue
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test2" />
-          <span className="checkmark"></span>Red
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" value="" name="test2" />
-          <span className="checkmark"></span>Green
-        </label>
+        <Input value="black" title="Black" name="test1" color="black" />
+
+        <Input value="blue" title="Blue" name="test1" color="blue" />
+
+        <Input value="red" title="Red" name="test1" color="red" />
+
+        <Input value="green" title="Green" name="test1" color="green" />
+
         <label className="sidebar-label-container">
           <input type="radio" value="" name="test2" />
           <span className="checkmark"></span>White

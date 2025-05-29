@@ -4,53 +4,36 @@
   margin-left: 20rem;
   margin-top: 2rem;
   z-index: -2;
-  gap: 1.5rem; /* Better than margin on individual cards */
 }
 
 .card {
   margin: 20px;
   border: 2px solid #ededed;
-  padding: 1.5rem;
+  padding: 20px;
   cursor: pointer;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
   width: 13rem;
-  height: 13rem;
   margin-bottom: 1rem;
-  object-fit: contain;
 }
 
 .card-title {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
 }
 
 .card-reviews {
   margin-bottom: 1rem;
   display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 .rating-star {
   color: #d5ab55;
-  font-size: 1.1rem;
 }
 
 .total-reviews {
   font-size: 0.9rem;
-  margin-left: 0.5rem;
-  color: #666;
+  margin-left: 10px;
 }
 
 .card-price {
@@ -59,18 +42,6 @@
   align-items: center;
 }
 
-.card-price del {
-  color: #666;
-  margin-right: 0.5rem;
-}
-
 .bag-icon {
   color: #535353;
-  transition: transform 0.2s ease;
-  font-size: 1.1rem;
-}
-
-.bag-icon:hover {
-  transform: scale(1.1);
-  color: #d5ab55;
 }
