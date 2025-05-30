@@ -1,3 +1,7 @@
 .color-title {
   margin-top: 2rem;
 }
+
+.checkmark {
+  border: 2px solid black;
+}
