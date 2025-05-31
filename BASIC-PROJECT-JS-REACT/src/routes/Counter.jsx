@@ -1,7 +1,12 @@
-import React, { useReducer } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
+import { useReducer } from 'react';
 import usePrev from '../hooks/usePrev';
 
-function Counter() {
+export const Route = createFileRoute('/Counter')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   // Initial state and reducer
   const initialState = { counter: 0 };
 
@@ -30,7 +35,6 @@ function Counter() {
   const handleMouseOut = color => e => {
     e.target.style.backgroundColor = color;
   };
-
   return (
     <div style={styles.container}>
       <h1 style={styles.count}>{count.counter}</h1>
@@ -59,8 +63,6 @@ function Counter() {
     </div>
   );
 }
-
-export default Counter;
 
 // Styles
 const styles = {

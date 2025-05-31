@@ -1,6 +1,12 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { useEffect, useState } from 'react';
 
-const Todo = () => {
+export const Route = createFileRoute('/Todo')({
+  component: RouteComponent,
+  defaultPreload: 'Intent',
+});
+
+function RouteComponent() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -121,6 +127,4 @@ const Todo = () => {
       </ul>
     </div>
   );
-};
-
-export default Todo;
+}

@@ -1,7 +1,13 @@
+import { createFileRoute } from '@tanstack/react-router';
 import useFetch from '../hooks/useFetch';
 import { ShimmerPostItem } from 'react-shimmer-effects';
 
-const Profiles = () => {
+export const Route = createFileRoute('/Profiles')({
+  component: RouteComponent,
+  defaultPreload: 'Intent',
+});
+
+function RouteComponent() {
   const url = 'https://api.freeapi.app/api/v1/public/randomusers/';
 
   const { data, error, loading } = useFetch(url);
@@ -36,9 +42,7 @@ const Profiles = () => {
       </div>
     </div>
   );
-};
-
-export default Profiles;
+}
 
 // Styles
 const containerStyle = {

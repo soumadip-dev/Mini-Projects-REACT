@@ -1,6 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
 
-const Calculator = () => {
+export const Route = createFileRoute('/Calculator')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   const [inputValue, setInputValue] = useState('');
 
   const clear = () => setInputValue('');
@@ -75,9 +80,7 @@ const Calculator = () => {
       </span>
     </form>
   );
-};
-
-export default Calculator;
+}
 
 // Style objects
 const calculatorStyle = {

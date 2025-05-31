@@ -1,6 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { useRef, useState, useEffect } from 'react';
 
-const StopWatch = () => {
+export const Route = createFileRoute('/StopWatch')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const timerRef = useRef();
@@ -89,6 +94,4 @@ const StopWatch = () => {
       </button>
     </div>
   );
-};
-
-export default StopWatch;
+}

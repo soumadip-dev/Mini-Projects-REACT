@@ -1,7 +1,13 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import * as React from 'react';
+import { Outlet, createRootRoute } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 
-const Layout = () => {
+export const Route = createRootRoute({
+  component: RootComponent,
+});
+
+function RootComponent() {
   const navContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -32,7 +38,6 @@ const Layout = () => {
   };
 
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <nav style={navContainerStyle}>
@@ -41,13 +46,13 @@ const Layout = () => {
           { to: '/counter', label: 'Counter' },
           { to: '/todo', label: 'Todo' },
           { to: '/meals', label: 'Meals' },
-          { to: '/profile', label: 'Profiles' },
+          { to: '/profiles', label: 'Profiles' },
           { to: '/form', label: 'Form' },
-          { to: '/watch', label: 'Stop Watch' },
-          { to: '/debounce', label: 'Debounce' },
+          { to: '/stopWatch', label: 'Stop Watch' },
+          { to: '/debounceDemo', label: 'Debounce' },
           { to: '/calculator', label: 'Calculator' },
-          { to: '/theme', label: 'Toggle Theme' },
-          { to: '/testimonial', label: 'Testimonial' },
+          { to: '/toggleBackgroundColor', label: 'Toggle Theme' },
+          { to: '/Testimonials', label: 'Testimonial' },
           { to: '/accordion', label: 'Accordion' },
         ].map(({ to, label }, idx) => (
           <Link
@@ -64,20 +69,14 @@ const Layout = () => {
           </Link>
         ))}
       </nav>
-
-      {/* Main content rendered here */}
       <div style={{ flex: 1, padding: '1.25rem' }}>
-        {' '}
-        {/* ~20px */}
         <Outlet />
       </div>
 
-      {/* Footer */}
       <footer style={footerStyle}>
         © {new Date().getFullYear()} Soumadip Majila. All rights reserved.
       </footer>
+      <TanStackRouterDevtools />
     </div>
   );
-};
-
-export default Layout;
+}

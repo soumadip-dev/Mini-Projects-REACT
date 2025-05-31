@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
 import useDebounce from '../hooks/useDebounce';
+import { useState } from 'react';
 
-const DebounceDemo = () => {
+export const Route = createFileRoute('/DebounceDemo')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   const [text, setText] = useState('');
   const [debouncedText, setDebouncedText] = useState('');
 
@@ -110,6 +115,4 @@ const DebounceDemo = () => {
       </div>
     </div>
   );
-};
-
-export default DebounceDemo;
+}

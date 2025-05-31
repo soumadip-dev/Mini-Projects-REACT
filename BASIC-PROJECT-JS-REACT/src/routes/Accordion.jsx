@@ -1,5 +1,42 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { accordionData } from '../utils/content';
 import { useState } from 'react';
+
+export const Route = createFileRoute('/Accordion')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
+  return (
+    <div style={accordionStyles}>
+      {accordionData.map(({ title, content }, index) => (
+        <SingleAccordion key={index} title={title} content={content} />
+      ))}
+    </div>
+  );
+}
+
+const SingleAccordion = ({ title, content }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <section style={accordionCardStyles}>
+      <div
+        style={{
+          ...headerStyles,
+          backgroundColor: isActive ? '#e9ecef' : headerStyles.backgroundColor,
+        }}
+        onClick={() => setIsActive(!isActive)}
+      >
+        <div>{title}</div>
+        <p style={iconStyles}>{isActive ? '-' : '+'}</p>
+      </div>
+      <div style={isActive ? activeContentStyles : contentStyles}>
+        {isActive && <p style={cardInfoStyles}>{content}</p>}
+      </div>
+    </section>
+  );
+};
 
 // Style objects
 const accordionStyles = {
@@ -52,37 +89,3 @@ const cardInfoStyles = {
   margin: '0',
   lineHeight: '1.6',
 };
-
-const Accordion = () => {
-  return (
-    <div style={accordionStyles}>
-      {accordionData.map(({ title, content }, index) => (
-        <SingleAccordion key={index} title={title} content={content} />
-      ))}
-    </div>
-  );
-};
-
-const SingleAccordion = ({ title, content }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  return (
-    <section style={accordionCardStyles}>
-      <div
-        style={{
-          ...headerStyles,
-          backgroundColor: isActive ? '#e9ecef' : headerStyles.backgroundColor,
-        }}
-        onClick={() => setIsActive(!isActive)}
-      >
-        <div>{title}</div>
-        <p style={iconStyles}>{isActive ? '-' : '+'}</p>
-      </div>
-      <div style={isActive ? activeContentStyles : contentStyles}>
-        {isActive && <p style={cardInfoStyles}>{content}</p>}
-      </div>
-    </section>
-  );
-};
-
-export default Accordion;

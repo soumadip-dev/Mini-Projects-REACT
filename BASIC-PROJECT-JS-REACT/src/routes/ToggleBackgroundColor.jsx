@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
+import { useState } from 'react';
 
-function ToggleBackgroundColor() {
+export const Route = createFileRoute('/ToggleBackgroundColor')({
+  component: RouteComponent,
+});
+
+function RouteComponent()  {
   const [backgroundColor, setBackgroundColor] = useState('white');
   const [textColor, setTextColor] = useState('#1b1b1b');
   const [buttonStyle, setButtonStyle] = useState('white');
@@ -54,5 +59,3 @@ function ToggleBackgroundColor() {
     </section>
   );
 }
-
-export default ToggleBackgroundColor;

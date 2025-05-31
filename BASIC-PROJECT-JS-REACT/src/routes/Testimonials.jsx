@@ -1,6 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react';
 
-const Testimonials = () => {
+export const Route = createFileRoute('/Testimonials')({
+  component: RouteComponent,
+})
+
+function RouteComponent() {
   const testimonials = [
     {
       quote: "This is the best product I've ever used!",
@@ -106,5 +111,3 @@ const Testimonials = () => {
     </div>
   );
 };
-
-export default Testimonials;

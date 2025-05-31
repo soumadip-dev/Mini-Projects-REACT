@@ -1,7 +1,13 @@
+import { createLazyFileRoute } from '@tanstack/react-router';
 import useRefetchableFetch from '../hooks/useRefetchableFetch';
 import { ShimmerPostItem } from 'react-shimmer-effects';
 
-const Meals = () => {
+export const Route = createLazyFileRoute('/Meals')({
+  component: RouteComponent,
+  defaultPreload: 'Intent',
+});
+
+function RouteComponent() {
   const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian';
   const { data, error, loading } = useRefetchableFetch(url, 10);
 
@@ -39,9 +45,7 @@ const Meals = () => {
       ))}
     </div>
   );
-};
-
-export default Meals;
+}
 
 // Styles
 const containerStyle = {

@@ -1,7 +1,12 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
 import { useForm } from '../hooks/useForm';
 
-const Form = () => {
+export const Route = createFileRoute('/Form')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   // State management remains the same
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -198,6 +203,4 @@ const Form = () => {
       </form>
     </div>
   );
-};
-
-export default Form;
+}
