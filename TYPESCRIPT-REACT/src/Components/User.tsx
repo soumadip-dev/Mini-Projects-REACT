@@ -1,4 +1,11 @@
-const User = ({ name, age, isStudent }: { name: string; age: number; isStudent: boolean }) => {
+import type { FC } from 'react';
+
+interface UserShape {
+  name: string;
+  age: number;
+  isStudent: boolean;
+}
+const User: FC<UserShape> = ({ name, age, isStudent }: UserShape) => {
   return (
     <div>
       <h2>Name: {name}</h2>
