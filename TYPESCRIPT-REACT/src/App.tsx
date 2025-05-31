@@ -1,27 +1,17 @@
-import AdminInfo from './Components/AdminInfo';
-import UserInfo from './Components/UserInfo';
-import { type Info, type AdminInfoList } from './types';
+import Counter from './Components/Counter';
+import TodoList from './Components/TodoList';
+import UserProfile from './Components/UserProfile';
 
 function App() {
-  const user: Info = {
-    id: 1,
-    name: 'John Doe',
-    email: 'john@gmail.com',
-  };
-
-  const admin: AdminInfoList = {
-    id: 2,
-    name: 'Jane Doe',
-    email: 'jane@gmail.com',
-    role: 'admin',
-    lastLogin: new Date(),
-  };
   return (
     <>
-      <UserInfo user={user} />
-      <AdminInfo admin={admin} />
+      <Counter />
+      <UserProfile />
+      <TodoList />
     </>
   );
 }
 
 export default App;
+
+// useState Types
