@@ -5,10 +5,10 @@
 </h1>
 
 <div align="center">
-  <a href="https://github.com/kavindu-dilshan">
-    <img src="https://skillicons.dev/icons?i=js,react,github" alt="Tech Stack" width="130" style="padding: 15px 0;">
-  </a>
+  <img src="https://skillicons.dev/icons?i=js,ts,react,github" alt="Tech Stack" width="160" style="margin: 0 5px;">
+  <img src="https://tanstack.com/assets/logo-color-100w-br5_Ikqp.png" alt="TanStack" width="35" style="margin: 0 5px;">
 </div>
+
 
 <h3 align="center" style="margin: 20px 0;">
   A collection of small React projects to practice and demonstrate various coding concepts and techniques.

@@ -25,6 +25,7 @@ import { Route as CalculatorImport } from './routes/Calculator'
 import { Route as AccordionImport } from './routes/Accordion'
 import { Route as NotFoundImport } from './routes/$not-found'
 import { Route as IndexImport } from './routes/index'
+import { Route as ProfilePidImport } from './routes/profile.$pid'
 
 // Create Virtual Routes
 
@@ -107,6 +108,12 @@ const NotFoundRoute = NotFoundImport.update({
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProfilePidRoute = ProfilePidImport.update({
+  id: '/profile/$pid',
+  path: '/profile/$pid',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -205,6 +212,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MealsLazyImport
       parentRoute: typeof rootRoute
     }
+    '/profile/$pid': {
+      id: '/profile/$pid'
+      path: '/profile/$pid'
+      fullPath: '/profile/$pid'
+      preLoaderRoute: typeof ProfilePidImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -224,6 +238,7 @@ export interface FileRoutesByFullPath {
   '/Todo': typeof TodoRoute
   '/ToggleBackgroundColor': typeof ToggleBackgroundColorRoute
   '/Meals': typeof MealsLazyRoute
+  '/profile/$pid': typeof ProfilePidRoute
 }
 
 export interface FileRoutesByTo {
@@ -240,6 +255,7 @@ export interface FileRoutesByTo {
   '/Todo': typeof TodoRoute
   '/ToggleBackgroundColor': typeof ToggleBackgroundColorRoute
   '/Meals': typeof MealsLazyRoute
+  '/profile/$pid': typeof ProfilePidRoute
 }
 
 export interface FileRoutesById {
@@ -257,6 +273,7 @@ export interface FileRoutesById {
   '/Todo': typeof TodoRoute
   '/ToggleBackgroundColor': typeof ToggleBackgroundColorRoute
   '/Meals': typeof MealsLazyRoute
+  '/profile/$pid': typeof ProfilePidRoute
 }
 
 export interface FileRouteTypes {
@@ -275,6 +292,7 @@ export interface FileRouteTypes {
     | '/Todo'
     | '/ToggleBackgroundColor'
     | '/Meals'
+    | '/profile/$pid'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -290,6 +308,7 @@ export interface FileRouteTypes {
     | '/Todo'
     | '/ToggleBackgroundColor'
     | '/Meals'
+    | '/profile/$pid'
   id:
     | '__root__'
     | '/'
@@ -305,6 +324,7 @@ export interface FileRouteTypes {
     | '/Todo'
     | '/ToggleBackgroundColor'
     | '/Meals'
+    | '/profile/$pid'
   fileRoutesById: FileRoutesById
 }
 
@@ -322,6 +342,7 @@ export interface RootRouteChildren {
   TodoRoute: typeof TodoRoute
   ToggleBackgroundColorRoute: typeof ToggleBackgroundColorRoute
   MealsLazyRoute: typeof MealsLazyRoute
+  ProfilePidRoute: typeof ProfilePidRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -338,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   TodoRoute: TodoRoute,
   ToggleBackgroundColorRoute: ToggleBackgroundColorRoute,
   MealsLazyRoute: MealsLazyRoute,
+  ProfilePidRoute: ProfilePidRoute,
 }
 
 export const routeTree = rootRoute
@@ -362,7 +384,8 @@ export const routeTree = rootRoute
         "/Testimonials",
         "/Todo",
         "/ToggleBackgroundColor",
-        "/Meals"
+        "/Meals",
+        "/profile/$pid"
       ]
     },
     "/": {
@@ -403,6 +426,9 @@ export const routeTree = rootRoute
     },
     "/Meals": {
       "filePath": "Meals.lazy.jsx"
+    },
+    "/profile/$pid": {
+      "filePath": "profile.$pid.jsx"
     }
   }
 }

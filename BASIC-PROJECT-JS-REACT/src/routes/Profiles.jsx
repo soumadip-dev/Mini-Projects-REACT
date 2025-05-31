@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import useFetch from '../hooks/useFetch';
 import { ShimmerPostItem } from 'react-shimmer-effects';
+import { Link } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/Profiles')({
   component: RouteComponent,
@@ -33,11 +34,11 @@ function RouteComponent() {
       <p style={subHeadingStyle}>Fetched from Free API</p>
       <div style={gridStyle}>
         {data?.data?.data.map(user => (
-          <div key={user.id} style={cardStyle}>
+          <Link key={user.id} style={cardStyle} to={`/profile/${user.id}`}>
             <img src={user.picture.large} alt="User profile" style={imageStyle} />
             <p style={nameStyle}>{`${user.name.title} ${user.name.first} ${user.name.last}`}</p>
             <p style={emailStyle}>{user.email}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -81,6 +82,7 @@ const cardStyle = {
   padding: '20px',
   textAlign: 'center',
   transition: 'transform 0.2s ease',
+  textDecoration: 'none',
 };
 
 const imageStyle = {
