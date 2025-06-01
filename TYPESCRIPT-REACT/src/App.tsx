@@ -1,21 +1,20 @@
-import Counter from './Components/Counter';
-import { CountContextProvider } from './Context/CountContextProvider';
-
+// import Counter from './Components/Counter';
+// import { CountContextProvider } from './Context/CountContextProvider';
 // import TodoList from './Components/TodoList';
-
-import Form from './Components/Form';
-import Counter_Reducer from './Components/Counter_Reducer';
+// import Form from './Components/Form';
+import UseEffectPractice from './Components/UseEffectPractice';
+// import Counter_Reducer from './Components/Counter_Reducer';
 
 function App() {
   return (
     <>
-      <CountContextProvider>
+      {/* <CountContextProvider>
         <Counter />
-      </CountContextProvider>
-
-      <Counter_Reducer />
+      </CountContextProvider> */}
+      {/* <Counter_Reducer /> */}
       {/* <TodoList /> */}
-      <Form />
+      {/* <Form /> */}
+      <UseEffectPractice />
     </>
   );
 }
