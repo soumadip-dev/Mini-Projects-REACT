@@ -1,4 +1,6 @@
-// import Counter from './Components/Counter';
+import Counter from './Components/Counter';
+import { CountContextProvider } from './Context/CountContextProvider';
+
 // import TodoList from './Components/TodoList';
 
 import Form from './Components/Form';
@@ -6,13 +8,14 @@ import Form from './Components/Form';
 function App() {
   return (
     <>
-      {/* <Counter />
-      <TodoList /> */}
+      <CountContextProvider>
+        <Counter />
+      </CountContextProvider>
+
+      {/* <TodoList /> */}
       <Form />
     </>
   );
 }
 
 export default App;
-
-// useState Types
