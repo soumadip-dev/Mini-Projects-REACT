@@ -5,6 +5,8 @@
 // import UseEffectPractice from './Components/UseEffectPractice';
 // import Counter_Reducer from './Components/Counter_Reducer';
 
+import UserList from './Components/UserList';
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
       {/* <TodoList /> */}
       {/* <Form /> */}
       {/* <UseEffectPractice /> */}
+      <UserList />
     </>
   );
 }
