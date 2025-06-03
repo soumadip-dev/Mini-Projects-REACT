@@ -1,61 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const styles = {
-  container: {
-    padding: '20px',
-    maxWidth: '500px',
-    margin: '0 auto',
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-  },
-  heading: {
-    textAlign: 'center' as const,
-    color: '#333',
-  },
-  input: {
-    padding: '8px',
-    width: '70%',
-    marginRight: '10px',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-  },
-  button: {
-    padding: '8px 12px',
-    border: 'none',
-    borderRadius: '4px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    cursor: 'pointer',
-  },
-  list: {
-    listStyle: 'none' as const,
-    padding: 0,
-    marginTop: '20px',
-  },
-  listItem: {
-    backgroundColor: '#fff',
-    padding: '10px',
-    marginBottom: '10px',
-    borderRadius: '4px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-  },
-  actionButtons: {
-    marginLeft: '10px',
-    cursor: 'pointer',
-  },
-  editInput: {
-    padding: '6px',
-    marginRight: '10px',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-  },
-};
-
 const TodoList = () => {
   const [todo, setTodo] = useState<string[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
@@ -72,78 +16,90 @@ const TodoList = () => {
   }, [todo]);
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Todo List</h1>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={e => setNewTodo(e.target.value)}
-        placeholder="Add a new todo"
-        style={styles.input}
-      />
-      <button
-        onClick={() => {
-          if (newTodo.trim() !== '') {
-            setTodo([...todo, newTodo]);
-            setNewTodo('');
-          }
-        }}
-        style={styles.button}
-      >
-        Add Todo
-      </button>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="p-6 bg-blue-600">
+          <h1 className="text-2xl font-bold text-center text-white">Todo List</h1>
+        </div>
 
-      <ul style={styles.list}>
-        {todo.map((item, index) => (
-          <li key={index} style={styles.listItem}>
-            {editingIndex === index ? (
-              <>
-                <input
-                  type="text"
-                  value={editedTodo}
-                  onChange={e => {
-                    setEditedTodo(e.target.value);
-                  }}
-                  style={styles.editInput}
-                />
-                <button
-                  onClick={() => {
-                    const updatedTodos = [...todo];
-                    if (editedTodo.trim() !== '') updatedTodos[index] = editedTodo;
-                    setTodo(updatedTodos);
-                    setEditingIndex(null);
-                    setNewTodo('');
-                  }}
-                  style={styles.button}
-                >
-                  Save
-                </button>
-              </>
-            ) : (
-              <>
-                <span>{item}</span>
-                <span>
-                  <span
-                    onClick={() => setTodo(todo.filter((_, i) => i !== index))}
-                    style={styles.actionButtons}
-                  >
-                    ❌
-                  </span>
-                  <span
-                    onClick={() => {
-                      setEditingIndex(index);
-                      setEditedTodo(item);
-                    }}
-                    style={styles.actionButtons}
-                  >
-                    ✏️
-                  </span>
-                </span>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+        <div className="p-6">
+          <div className="flex gap-2 mb-6">
+            <input
+              type="text"
+              value={newTodo}
+              onChange={e => setNewTodo(e.target.value)}
+              placeholder="Add a new todo"
+              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              onClick={() => {
+                if (newTodo.trim() !== '') {
+                  setTodo([...todo, newTodo]);
+                  setNewTodo('');
+                }
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Add
+            </button>
+          </div>
+
+          <ul className="space-y-3">
+            {todo.map((item, index) => (
+              <li
+                key={index}
+                className="bg-gray-50 p-4 rounded-lg shadow-sm flex justify-between items-center"
+              >
+                {editingIndex === index ? (
+                  <>
+                    <input
+                      type="text"
+                      value={editedTodo}
+                      onChange={e => {
+                        setEditedTodo(e.target.value);
+                      }}
+                      className="flex-1 px-3 py-1 mr-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                      onClick={() => {
+                        const updatedTodos = [...todo];
+                        if (editedTodo.trim() !== '') updatedTodos[index] = editedTodo;
+                        setTodo(updatedTodos);
+                        setEditingIndex(null);
+                        setNewTodo('');
+                      }}
+                      className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                    >
+                      Save
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-gray-800">{item}</span>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => setTodo(todo.filter((_, i) => i !== index))}
+                        className="text-red-500 hover:text-red-700 transition-colors"
+                      >
+                        ❌
+                      </button>
+                      <button
+                        onClick={() => {
+                          setEditingIndex(index);
+                          setEditedTodo(item);
+                        }}
+                        className="text-blue-500 hover:text-blue-700 transition-colors"
+                      >
+                        ✏️
+                      </button>
+                    </div>
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

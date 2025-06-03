@@ -26,66 +26,60 @@ const Form = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} style={formStyle}>
-        <input type="text" placeholder="Enter your name" ref={name} style={inputStyle} />
-        <input type="email" placeholder="Enter your email" ref={email} style={inputStyle} />
-        <input
-          type="password"
-          placeholder="Enter your password"
-          ref={password}
-          style={inputStyle}
-        />
-        <button type="submit" style={buttonStyle}>
-          Submit
-        </button>
-      </form>
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md mx-auto space-y-8">
+        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+          <div className="mb-4">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              ref={name}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              ref={email}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-6">
+            <input
+              type="password"
+              placeholder="Enter your password"
+              ref={password}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
 
-      <section style={sectionStyle}>
-        <h2>Submitted Data</h2>
-        <p>
-          <strong>Name:</strong> {submittedData.name}
-        </p>
-        <p>
-          <strong>Email:</strong> {submittedData.email}
-        </p>
-        <p>
-          <strong>Password:</strong> {submittedData.password}
-        </p>
-      </section>
-    </>
+        <section className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">Submitted Data</h2>
+          <div className="space-y-2">
+            <p className="text-gray-700">
+              <strong className="font-semibold">Name:</strong> {submittedData.name}
+            </p>
+            <p className="text-gray-700">
+              <strong className="font-semibold">Email:</strong> {submittedData.email}
+            </p>
+            <p className="text-gray-700">
+              <strong className="font-semibold">Password:</strong> {submittedData.password}
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };
 
 export default Form;
-
-const formStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '10px',
-  maxWidth: '300px',
-  margin: '20px auto',
-  padding: '20px',
-  border: '1px solid #ccc',
-  borderRadius: '8px',
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '8px',
-  fontSize: '14px',
-};
-
-const buttonStyle: React.CSSProperties = {
-  padding: '10px',
-  backgroundColor: '#007bff',
-  color: '#fff',
-  border: 'none',
-  borderRadius: '4px',
-  cursor: 'pointer',
-};
-
-const sectionStyle: React.CSSProperties = {
-  maxWidth: '300px',
-  margin: '0 auto',
-  textAlign: 'left',
-};
