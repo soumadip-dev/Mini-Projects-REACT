@@ -16,7 +16,7 @@ const TodoList = () => {
   }, [todo]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center  p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-6 bg-blue-600">
           <h1 className="text-2xl font-bold text-center text-white">Todo List</h1>

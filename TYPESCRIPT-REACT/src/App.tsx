@@ -3,9 +3,8 @@
 // import TodoList from './Components/TodoList';
 // import Form from './Components/Form';
 // import UseEffectPractice from './Components/UseEffectPractice';
-// import Counter_Reducer from './Components/Counter_Reducer';
-
-import UserList from './Components/UserList';
+import Counter_Reducer from './Components/Counter_Reducer';
+// import UserList from './Components/UserList';
 
 function App() {
   return (
@@ -13,11 +12,11 @@ function App() {
       {/* <CountContextProvider>
         <Counter />
       </CountContextProvider> */}
-      {/* <Counter_Reducer /> */}
+      <Counter_Reducer />
       {/* <TodoList /> */}
       {/* <Form /> */}
       {/* <UseEffectPractice /> */}
-      <UserList />
+      {/* <UserList /> */}
     </>
   );
 }
