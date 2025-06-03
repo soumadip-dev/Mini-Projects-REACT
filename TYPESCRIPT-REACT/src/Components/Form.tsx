@@ -1,4 +1,6 @@
 import { useRef, useState, type FormEvent } from 'react';
+import { Input } from './ui/input';
+import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 
 type submittedDataType = {
   name: string;
@@ -30,7 +32,7 @@ const Form = () => {
       <div className="max-w-md mx-auto space-y-8">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
-            <input
+            <Input
               type="text"
               placeholder="Enter your name"
               ref={name}
@@ -38,7 +40,7 @@ const Form = () => {
             />
           </div>
           <div className="mb-4">
-            <input
+            <Input
               type="email"
               placeholder="Enter your email"
               ref={email}
@@ -46,7 +48,7 @@ const Form = () => {
             />
           </div>
           <div className="mb-6">
-            <input
+            <Input
               type="password"
               placeholder="Enter your password"
               ref={password}
@@ -63,9 +65,11 @@ const Form = () => {
           </div>
         </form>
 
-        <section className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">Submitted Data</h2>
-          <div className="space-y-2">
+        <Card className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 border-none">
+          <CardHeader>
+            <CardTitle className="text-xl font-bold text-gray-800 mb-4">Submitted Data</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
             <p className="text-gray-700">
               <strong className="font-semibold">Name:</strong> {submittedData.name}
             </p>
@@ -75,8 +79,8 @@ const Form = () => {
             <p className="text-gray-700">
               <strong className="font-semibold">Password:</strong> {submittedData.password}
             </p>
-          </div>
-        </section>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
