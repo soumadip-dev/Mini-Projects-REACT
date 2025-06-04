@@ -22,12 +22,13 @@
 
 ## 📦 Projects
 
+### JavaScript + React
+
 <div align="center">
 
 | Project Name                 | Description                                        |
 | ---------------------------- | -------------------------------------------------- |
 | **Counter**                  | A simple counter app                               |
-| **Todo**                     | A task management app                              |
 | **Meals API**                | Fetches and displays meal data from an API         |
 | **Profiles**                 | Displays user profile information                  |
 | **Contact Form**             | A form to collect and validate user input          |
@@ -35,5 +36,16 @@
 | **Testimonials**             | A section to showcase user testimonials            |
 | **Accordion**                | An interactive collapsible accordion               |
 | **Ecommerce with Filtering** | A product listing app with advanced filter options |
+
+</div>
+
+### TypeScript + React
+
+<div align="center">
+
+| Project Name | Description                          |
+| ------------ | ------------------------------------ |
+| **Todo**     | A task management app                |
+| **Tabs**     | A tabbed interface component         |
 
 </div>

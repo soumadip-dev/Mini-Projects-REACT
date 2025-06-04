@@ -1,12 +1,12 @@
 // import Counter from './Components/Counter';
 // import { CountContextProvider } from './Context/CountContextProvider';
-// import TodoList from './Components/TodoList';
+import TodoList from './Components/TodoList';
 // import Form from './Components/Form';
 // import UseEffectPractice from './Components/UseEffectPractice';
 // import Counter_Reducer from './Components/Counter_Reducer';
 // import UserList from './Components/UserList';
 // import ReactHookForm from './Components/ReactHookForm';
-import AdvancedReactHookForm from './Components/AdvancedReactHookForm';
+// import AdvancedReactHookForm from './Components/AdvancedReactHookForm';
 
 function App() {
   return (
@@ -15,12 +15,12 @@ function App() {
         <Counter />
       </CountContextProvider> */}
       {/* <Counter_Reducer /> */}
-      {/* <TodoList /> */}
+      <TodoList />
       {/* <Form /> */}
       {/* <UseEffectPractice /> */}
       {/* <UserList /> */}
       {/* <ReactHookForm /> */}
-      <AdvancedReactHookForm />
+      {/* <AdvancedReactHookForm /> */}
     </>
   );
 }
