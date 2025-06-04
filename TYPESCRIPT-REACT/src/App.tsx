@@ -5,7 +5,8 @@
 // import UseEffectPractice from './Components/UseEffectPractice';
 // import Counter_Reducer from './Components/Counter_Reducer';
 // import UserList from './Components/UserList';
-import ReactHookForm from './Components/ReactHookForm';
+// import ReactHookForm from './Components/ReactHookForm';
+import AdvancedReactHookForm from './Components/AdvancedReactHookForm';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <Form /> */}
       {/* <UseEffectPractice /> */}
       {/* <UserList /> */}
-      <ReactHookForm />
+      {/* <ReactHookForm /> */}
+      <AdvancedReactHookForm />
     </>
   );
 }
