@@ -43,9 +43,10 @@
 
 <div align="center">
 
-| Project Name | Description                          |
-| ------------ | ------------------------------------ |
-| **Todo**     | A task management app                |
-| **Tabs**     | A tabbed interface component         |
+| Project Name | Description                  |
+| ------------ | ---------------------------- |
+| **Todo**     | A task management app        |
+| **Tabs**     | A tabbed interface component |
+| **Blogs**    | A blogging platform          |
 
 </div>
