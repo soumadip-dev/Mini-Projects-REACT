@@ -1,4 +1,10 @@
+import CountDown from './components/CountDown';
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div className="font-sans">
+      <CountDown />
+    </div>
+  );
 };
 export default App;

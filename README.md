@@ -1,8 +1,4 @@
-<h1 align="center">
-  <br>
-  Mini-Projects-React
-  <br>
-</h1>
+# Mini-Projects-React
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=js,ts,react,github" alt="Tech Stack" width="160" style="margin: 0 5px;">
@@ -13,7 +9,7 @@
   <img src="https://avatars.githubusercontent.com/u/139895814?v=4" alt="Shadcn UI" width="35" style="margin: 0 5px; border-radius:50%">  
 </div>
 
-<h3 align="center" style="margin: 20px 0;">
+<h3 align="center">
   A collection of small React projects to practice and demonstrate various coding concepts and techniques.
 </h3>
 
@@ -21,31 +17,32 @@
 
 ## 📦 Projects
 
-### JavaScript + React
+### JavaScript + React Projects
 
 <div align="center">
 
-| Project Name                                                                                                                         | Description                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
-| [**Counter**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Counter.jsx)           | A simple counter app                               |
-| [**Meals API**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Meals.lazy.jsx)      | Fetches and displays meal data from an API         |
-| [**Profiles**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Profiles.jsx)         | Displays user profile information                  |
-| [**Contact Form**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Form.jsx)         | A form to collect and validate user input          |
-| [**StopWatch**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/StopWatch.jsx)       | A functional digital stopwatch                     |
-| [**Testimonials**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Testimonials.jsx) | A section to showcase user testimonials            |
-| [**Accordion**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)       | An interactive collapsible accordion               |
-| [**Ecommerce with Filtering**](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)  | A product listing app with advanced filter options |
+| Project                  | Description                                        | Link                                                                                                                     |
+| ------------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Counter                  | A simple counter app                               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Counter.jsx)      |
+| Meals API                | Fetches and displays meal data from an API         | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Meals.lazy.jsx)   |
+| Profiles                 | Displays user profile information                  | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Profiles.jsx)     |
+| Contact Form             | A form to collect and validate user input          | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Form.jsx)         |
+| StopWatch                | A functional digital stopwatch                     | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/StopWatch.jsx)    |
+| Testimonials             | A section to showcase user testimonials            | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Testimonials.jsx) |
+| Accordion                | An interactive collapsible accordion               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)    |
+| Ecommerce with Filtering | A product listing app with advanced filter options | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)              |
 
 </div>
 
-### TypeScript + React
+### TypeScript + React Projects
 
 <div align="center">
 
-| Project Name                                                                                                                    | Description                                |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| [**Todo**](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/TYPESCRIPT-REACT-LEARNING/src/Components/TodoList.tsx) | A task management app                      |
-| [**Tabs**](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/TABS-PROJECT-TS-REACT)                                 | A tabbed interface component               |
-| [**Blogs**](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/BLOGS-PROJECT-TS_REACT)                               | A very basic blog app with CRUD operations |
+| Project   | Description                                                  | Link                                                                                                                        |
+| --------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Todo      | A task management app                                        | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/TYPESCRIPT-REACT-LEARNING/src/Components/TodoList.tsx) |
+| Tabs      | A tabbed interface component                                 | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/TABS-PROJECT-TS-REACT)                                 |
+| Blogs     | A very basic blog app with CRUD operations                   | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/BLOGS-PROJECT-TS_REACT)                                |
+| Countdown | A countdown app displaying days, hours, minutes, and seconds | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/COUNTDOWN-PROJECT-TS-REACT)                            |
 
 </div>
