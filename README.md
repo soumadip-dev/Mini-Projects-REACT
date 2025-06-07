@@ -1,7 +1,7 @@
 # Mini-Projects-React
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,github" alt="Tech Stack" width="160" style="margin: 0 5px;">
+  <img src="https://skillicons.dev/icons?i=js,ts,react,tailwind,github" alt="Tech Stack" width="200" style="margin: 0 5px;">
   <img src="https://tanstack.com/assets/logo-color-100w-br5_Ikqp.png" alt="TanStack" width="35" style="margin: 0 5px;">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpHj4UwTW4ANSlNjzQOiiOqfDa6kal9RpF0A&s" alt="Zustand" width="35" style="margin: 0 5px; border-radius:50%">
   <img src="https://img.daisyui.com/images/daisyui/daisyui-logo-2000.png" alt="DaisyUI" width="35" style="margin: 0 5px;">
