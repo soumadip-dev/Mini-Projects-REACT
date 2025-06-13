@@ -54,6 +54,7 @@ function RootComponent() {
           { to: '/toggleBackgroundColor', label: 'Toggle Theme' },
           { to: '/Testimonials', label: 'Testimonial' },
           { to: '/accordion', label: 'Accordion' },
+          { to: '/Far-Away', label: 'Far Away' },
         ].map(({ to, label }, idx) => (
           <Link
             key={to}

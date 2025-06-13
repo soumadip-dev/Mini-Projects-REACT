@@ -19,6 +19,7 @@ import { Route as TestimonialsImport } from './routes/Testimonials'
 import { Route as StopWatchImport } from './routes/StopWatch'
 import { Route as ProfilesImport } from './routes/Profiles'
 import { Route as FormImport } from './routes/Form'
+import { Route as FarAwayImport } from './routes/Far-away'
 import { Route as DebounceDemoImport } from './routes/DebounceDemo'
 import { Route as CounterImport } from './routes/Counter'
 import { Route as CalculatorImport } from './routes/Calculator'
@@ -72,6 +73,12 @@ const ProfilesRoute = ProfilesImport.update({
 const FormRoute = FormImport.update({
   id: '/Form',
   path: '/Form',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FarAwayRoute = FarAwayImport.update({
+  id: '/Far-away',
+  path: '/Far-away',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -163,6 +170,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebounceDemoImport
       parentRoute: typeof rootRoute
     }
+    '/Far-away': {
+      id: '/Far-away'
+      path: '/Far-away'
+      fullPath: '/Far-away'
+      preLoaderRoute: typeof FarAwayImport
+      parentRoute: typeof rootRoute
+    }
     '/Form': {
       id: '/Form'
       path: '/Form'
@@ -231,6 +245,7 @@ export interface FileRoutesByFullPath {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
   '/StopWatch': typeof StopWatchRoute
@@ -248,6 +263,7 @@ export interface FileRoutesByTo {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
   '/StopWatch': typeof StopWatchRoute
@@ -266,6 +282,7 @@ export interface FileRoutesById {
   '/Calculator': typeof CalculatorRoute
   '/Counter': typeof CounterRoute
   '/DebounceDemo': typeof DebounceDemoRoute
+  '/Far-away': typeof FarAwayRoute
   '/Form': typeof FormRoute
   '/Profiles': typeof ProfilesRoute
   '/StopWatch': typeof StopWatchRoute
@@ -285,6 +302,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Far-away'
     | '/Form'
     | '/Profiles'
     | '/StopWatch'
@@ -301,6 +319,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Far-away'
     | '/Form'
     | '/Profiles'
     | '/StopWatch'
@@ -317,6 +336,7 @@ export interface FileRouteTypes {
     | '/Calculator'
     | '/Counter'
     | '/DebounceDemo'
+    | '/Far-away'
     | '/Form'
     | '/Profiles'
     | '/StopWatch'
@@ -335,6 +355,7 @@ export interface RootRouteChildren {
   CalculatorRoute: typeof CalculatorRoute
   CounterRoute: typeof CounterRoute
   DebounceDemoRoute: typeof DebounceDemoRoute
+  FarAwayRoute: typeof FarAwayRoute
   FormRoute: typeof FormRoute
   ProfilesRoute: typeof ProfilesRoute
   StopWatchRoute: typeof StopWatchRoute
@@ -352,6 +373,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalculatorRoute: CalculatorRoute,
   CounterRoute: CounterRoute,
   DebounceDemoRoute: DebounceDemoRoute,
+  FarAwayRoute: FarAwayRoute,
   FormRoute: FormRoute,
   ProfilesRoute: ProfilesRoute,
   StopWatchRoute: StopWatchRoute,
@@ -378,6 +400,7 @@ export const routeTree = rootRoute
         "/Calculator",
         "/Counter",
         "/DebounceDemo",
+        "/Far-away",
         "/Form",
         "/Profiles",
         "/StopWatch",
@@ -405,6 +428,9 @@ export const routeTree = rootRoute
     },
     "/DebounceDemo": {
       "filePath": "DebounceDemo.jsx"
+    },
+    "/Far-away": {
+      "filePath": "Far-away.jsx"
     },
     "/Form": {
       "filePath": "Form.jsx"
