@@ -30,6 +30,7 @@
 | StopWatch                | A functional digital stopwatch                     | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/StopWatch.jsx)    |
 | Testimonials             | A section to showcase user testimonials            | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Testimonials.jsx) |
 | Accordion                | An interactive collapsible accordion               | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Accordion.jsx)    |
+| Far Away                 | Tropical adventure packing list app                | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/BASIC-PROJECT-JS-REACT/src/routes/Far-away.jsx)     |
 | Ecommerce with Filtering | A product listing app with advanced filter options | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/E-COMMERCE-FILTERING-PROJECT-JS-REACT)              |
 
 </div>
