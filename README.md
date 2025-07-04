@@ -45,7 +45,7 @@
 | --------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Todo      | A task management app                                        | [View](https://github.com/soumadip-dev/Mini-Projects-React/blob/main/TYPESCRIPT-REACT-LEARNING/src/Components/TodoList.tsx) |
 | Tabs      | A tabbed interface component                                 | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/TABS-PROJECT-TS-REACT)                                 |
-| Blogs     | A very basic blog app with CRUD operations                   | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/BLOGS-PROJECT-TS_REACT)                                |
+| Blogs     | A very basic blog app with CRUD operations                   | [View](https://github.com/soumadip-dev/Mini-Projects-REACT/tree/main/BLOGS-PROJECT-TS-REACT)                                |
 | Countdown | A countdown app displaying days, hours, minutes, and seconds | [View](https://github.com/soumadip-dev/Mini-Projects-React/tree/main/COUNTDOWN-PROJECT-TS-REACT)                            |
 
 </div>
