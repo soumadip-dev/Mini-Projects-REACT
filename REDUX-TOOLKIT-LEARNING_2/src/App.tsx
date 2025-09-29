@@ -3,6 +3,7 @@ import store from './store/store';
 import { Container, Typography } from '@mui/material';
 import HabitList from './components/habitList';
 import AddHabitForm from './components/addHabitForm';
+import HabitStats from './components/HabitStats';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         </Typography>
         <AddHabitForm />
         <HabitList />
+        <HabitStats />
       </Container>
     </Provider>
   );
