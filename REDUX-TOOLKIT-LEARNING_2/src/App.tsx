@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux';
 import store from './store/store';
 import { Container, Typography } from '@mui/material';
-import AddHabitForm from './components/AddHabitForm';
 import HabitList from './components/habitList';
+import AddHabitForm from './components/addHabitForm';
 
 const App = () => {
   return (
