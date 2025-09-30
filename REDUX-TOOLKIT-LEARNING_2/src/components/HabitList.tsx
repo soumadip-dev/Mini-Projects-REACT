@@ -1,26 +1,52 @@
 import { useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from '../store/store';
-import { Box, Button, Paper, Typography } from '@mui/material';
+import { Box, Button, Paper, Typography, Divider } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { toggleHabit, deleteHabit } from '../store/habitSlice';
+import { toggleHabit, deleteHabit, type Habit } from '../store/habitSlice';
 
 const HabitList: React.FC = () => {
   const habits = useSelector((state: RootState) => state.habits.habits);
   const today = new Date().toISOString().split('T')[0];
 
+  const getStreak = (habit: Habit) => {
+    let streak = 0;
+    const currentDate = new Date();
+    while (true) {
+      const dateString = currentDate.toISOString().split('T')[0];
+      if (habit.completedDates.includes(dateString)) {
+        streak += 1;
+        currentDate.setDate(currentDate.getDate() - 1);
+      } else {
+        break;
+      }
+    }
+    return streak;
+  };
+
   const dispatch = useDispatch<AppDispatch>();
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 4 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mt: 4 }}>
       {habits.map(habit => (
-        <Paper key={habit.id} elevation={2} sx={{ p: 2 }}>
+        <Paper
+          key={habit.id}
+          elevation={3}
+          sx={{
+            p: 3,
+            borderRadius: 2,
+            backgroundColor: '#f9f9f9',
+            transition: 'transform 0.2s',
+            '&:hover': { transform: 'scale(1.02)' },
+          }}
+        >
           <Box
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column', sm: 'row' },
-              alignItems: 'center',
+              alignItems: { xs: 'flex-start', sm: 'center' },
               justifyContent: 'space-between',
+              gap: 2,
             }}
           >
             <Box>
@@ -28,23 +54,30 @@ const HabitList: React.FC = () => {
                 {habit.name}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {habit.frequency}
+                Frequency: {habit.frequency}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+                Streak: {getStreak(habit)} day{getStreak(habit) !== 1 ? 's' : ''}
               </Typography>
             </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 1, mt: { xs: 1, sm: 0 } }}>
+
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1 }}>
               <Button
-                variant="outlined"
+                variant={habit.completedDates.includes(today) ? 'contained' : 'outlined'}
                 color={habit.completedDates.includes(today) ? 'success' : 'primary'}
                 startIcon={<CheckCircleIcon />}
                 onClick={() => dispatch(toggleHabit({ id: habit.id, date: today }))}
+                sx={{ minWidth: 160 }}
               >
                 {habit.completedDates.includes(today) ? 'Completed' : 'Mark as completed'}
               </Button>
+
               <Button
                 variant="outlined"
                 color="error"
                 startIcon={<DeleteIcon />}
                 onClick={() => dispatch(deleteHabit({ id: habit.id }))}
+                sx={{ minWidth: 100 }}
               >
                 Remove
               </Button>
