@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from '../store/store';
-import { Box, Button, Paper, Typography, Divider } from '@mui/material';
+import { Box, Button, Paper, Typography, LinearProgress } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { toggleHabit, deleteHabit, type Habit } from '../store/habitSlice';
@@ -49,7 +49,7 @@ const HabitList: React.FC = () => {
               gap: 2,
             }}
           >
-            <Box>
+            <Box sx={{ flex: 1 }}>
               <Typography variant="h6" sx={{ textTransform: 'capitalize' }}>
                 {habit.name}
               </Typography>
@@ -59,6 +59,13 @@ const HabitList: React.FC = () => {
               <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
                 Streak: {getStreak(habit)} day{getStreak(habit) !== 1 ? 's' : ''}
               </Typography>
+
+              {/* LinearProgress showing streak progress */}
+              <LinearProgress
+                variant="determinate"
+                value={(getStreak(habit) / 30) * 100}
+                sx={{ mt: 1, height: 10, borderRadius: 5 }}
+              />
             </Box>
 
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1 }}>
