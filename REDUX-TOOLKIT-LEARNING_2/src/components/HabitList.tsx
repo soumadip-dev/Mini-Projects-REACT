@@ -3,7 +3,7 @@ import type { AppDispatch, RootState } from '../store/store';
 import { Box, Button, Paper, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { toggleHabit } from '../store/habitSlice';
+import { toggleHabit, deleteHabit } from '../store/habitSlice';
 
 const HabitList: React.FC = () => {
   const habits = useSelector((state: RootState) => state.habits.habits);
@@ -40,7 +40,12 @@ const HabitList: React.FC = () => {
               >
                 {habit.completedDates.includes(today) ? 'Completed' : 'Mark as completed'}
               </Button>
-              <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
+              <Button
+                variant="outlined"
+                color="error"
+                startIcon={<DeleteIcon />}
+                onClick={() => dispatch(deleteHabit({ id: habit.id }))}
+              >
                 Remove
               </Button>
             </Box>
