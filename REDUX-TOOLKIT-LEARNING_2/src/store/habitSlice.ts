@@ -28,7 +28,6 @@ export const habitSlice = createSlice({
         completedDates: [],
         createdAt: new Date().toISOString(),
       };
-
       state.habits.push(newHabit);
     },
   },

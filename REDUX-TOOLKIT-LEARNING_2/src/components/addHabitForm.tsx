@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '../store/store';
 import { addHabit } from '../store/habitSlice';
 
-const addHabitForm: React.FC = () => {
+const AddHabitForm: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [frequency, setFrequency] = useState<'daily' | 'weekly'>('daily');
 
@@ -47,4 +47,4 @@ const addHabitForm: React.FC = () => {
   );
 };
 
-export default addHabitForm;
+export default AddHabitForm;
